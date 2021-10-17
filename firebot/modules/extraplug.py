@@ -28,6 +28,6 @@ async def install(event):
             path1 = Path(downloaded_file_name)
             shortname = path1.stem
             load_module(shortname.replace(".py", ""))
-            await fire.send_message(event.chat_id, "Installed Plugin `{}` successfully.".format(os.path.basename(downloaded_file_name)))
+            await fire.send_message(event.chat_id, "Installed Plugin {} successfully.".format(os.path.basename(downloaded_file_name)))
         else:
-            await fire.send_message(event.chat_id, "Plugin `{}` has been pre-installed and cannot be installed.".format(os.path.basename(downloaded_file_name)))
+            await fire.send_message(event.chat_id, "Plugin {} has been pre-installed and cannot be installed.".format(os.path.basename(downloaded_file_name)))

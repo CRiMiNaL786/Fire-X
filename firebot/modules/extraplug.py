@@ -23,7 +23,7 @@ async def install(event):
     await event.delete()
     for ixo in total_doxx:
         mxo = documentss[ixo].id
-        downloaded_file_name = await event.client.download_media(await fire.get_messages(chat, ids=mxo), "userbot/plugins/")
+        downloaded_file_name = await event.client.download_media(await fire.get_messages(chat, ids=mxo), "firebot/modules/")
         if "(" not in downloaded_file_name:
             path1 = Path(downloaded_file_name)
             shortname = path1.stem

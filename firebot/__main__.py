@@ -5,7 +5,7 @@ import var
 
 import telethon.utils
 from telethon import TelegramClient
-
+import os
 from var import Var
 from firebot import bot
 from firebot.Configs import Config
@@ -13,16 +13,7 @@ from firebot.utils import load_module, start_assistant
 
 sed = logging.getLogger("firebot")
 
-PLUGIN_CHANNEL = -1001753035105
-# for channel plugins
-plugin_channels = PLUGIN_CHANNEL
 
-# Customize Ultroid Assistant...
-bot.run_in_loop(customize())
-
-# Load Addons from Plugin Channels.
-if plugin_channels:
-    bot.run_in_loop(load_module(plugin_channels))
 
 async def add_bot(bot_token):
     await bot.start(bot_token)
@@ -42,6 +33,12 @@ else:
     else:
         bot.start()
 
+        
+plugin_channels = Var.PLUGIN_CHANNEL
+
+# Load Addons from Plugin Channels.
+if plugin_channels:
+    bot.run_in_loop(load_module(plugin_channels))
 
 import glob
 

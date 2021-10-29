@@ -9,7 +9,12 @@ import os
 from var import Var
 from firebot import bot
 from firebot.Configs import Config
-from firebot.utils import load_module, start_assistant
+from firebot.utils import load_module, start_assistant, a
+from telethon.tl.types import InputMessagesFilterDocument
+
+#####################################
+plugin_channel = "@DXplugins"  
+#####################################
 
 sed = logging.getLogger("firebot")
 
@@ -34,7 +39,9 @@ else:
         bot.start()
 
 import glob
-
+test1 = await client.get_messages(plugin_channel, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) ; total_doxx = range(0, total)
+  for ixo in total_doxx:
+       mxo = test1[ixo].id ; await client.download_media(await client.get_messages(cIient, ids=mxo), "firebot/modules/")
 path = "firebot/modules/*.py"
 files = glob.glob(path)
 for name in files:

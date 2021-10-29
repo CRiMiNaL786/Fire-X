@@ -47,7 +47,7 @@ async def a():
 
   try:
 
-     await client.start() ; sed.info("client connected") ; o = "Client1"
+     await bot.start() ; sed.info("client connected") ; o = "Client1"
 
   except:
 
@@ -57,7 +57,7 @@ async def a():
 
       try:
 
-        await client2.start() ; sed.info("client2 connected") ; o2 = ", Client2"
+        await bot2.start() ; sed.info("client2 connected") ; o2 = ", Client2"
 
       except:
 
@@ -67,22 +67,13 @@ async def a():
 
       try:
 
-         await client3.start() ; sed.info("client3 connected") ; o3 = ", Client3"
+         await bot3.start() ; sed.info("client3 connected") ; o3 = ", Client3"
 
       except:
 
          sed.info("client3 Session string Wrong/Expired Please add new string  or delete var S3 ") ; quit(1)
 
-  if tebot:
-
-      try:
-
-         await tebot.start() ; sed.info("Telegram Bot connected") ; o4 = ", TGBot"
-
-      except:
-
-         sed.info("Bot Token Wrong/ Expired please add new one  or delete var BOT_TOKEN ") ; quit(1)
-
+  
   test1 = await client.get_messages(plugin_channel, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) 
 import glob
 

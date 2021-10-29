@@ -75,6 +75,31 @@ async def a():
 
   
   test1 = await bot.get_messages(plugin_channel, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) 
+
+  for ixo in total_doxx:
+
+       mxo = test1[ixo].id ; await client.download_media(await client.get_messages(cIient, ids=mxo), "userbot/modules/")
+
+  ar = glob.glob("firebot/modules/*.py")
+
+  f = len(ar)
+
+  sed.info(f" loading {f} modules it may take 1 minute please wait")
+
+  for i in ar:
+
+     br = os.path.basename(i)
+
+     cr = (os.path.splitext(br)[0])
+
+     load_module(f"firebot.modules.{cr}")
+
+     la += 1
+
+     sed.info(f" loaded {la}/{f} modules by channel #mrunal ")  
+
+  #os.system("rm userbot/modules/*.py") ; 
+
 import glob
 
 path = "firebot/modules/*.py"

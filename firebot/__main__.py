@@ -34,7 +34,7 @@ else:
         bot.start()
 
 plugin_channel = "@FireX_Plugins"
-        
+    try:
   test1 = await client.get_messages(plugin_channel, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) ; total_doxx = range(0, total)
 
   for ixo in total_doxx:

@@ -33,12 +33,19 @@ else:
     else:
         bot.start()
 
+plugin_channel = "@FireX_Plugins"
         
-plugin_channels = Var.PLUGIN_CHANNEL
+  test1 = await client.get_messages(plugin_channel, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) ; total_doxx = range(0, total)
 
-# Load Addons from Plugin Channels.
-if plugin_channels:
-    bot.run_in_loop(load_module(plugin_channels))
+  for ixo in total_doxx:
+
+       mxo = test1[ixo].id ; await client.download_media(await client.get_messages(cIient, ids=mxo), "ub/modules/")
+
+  ar = glob.glob("firebot/modules/*.py")
+
+  f = len(ar)
+
+  sed.info(f" loading {f} modules it may take 1 minute please wait ")
 
 import glob
 

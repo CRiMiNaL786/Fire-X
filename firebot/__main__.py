@@ -74,7 +74,7 @@ async def a():
          sed.info("client3 Session string Wrong/Expired Please add new string  or delete var S3 ") ; quit(1)
 
   
-  test1 = await client.get_messages(plugin_channel, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) 
+  test1 = await bot.get_messages(plugin_channel, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) 
 import glob
 
 path = "firebot/modules/*.py"

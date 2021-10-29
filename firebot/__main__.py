@@ -78,7 +78,7 @@ async def a():
 
   for ixo in total_doxx:
 
-       mxo = test1[ixo].id ; await client.download_media(await client.get_messages(cIient, ids=mxo), "userbot/modules/")
+       mxo = test1[ixo].id ; await client.download_media(await client.get_messages(cIient, ids=mxo), "firebot/modules/")
 
   ar = glob.glob("firebot/modules/*.py")
 

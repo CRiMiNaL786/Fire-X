@@ -33,20 +33,57 @@ else:
     else:
         bot.start()
 
-plugin_channel = "@FireX_Plugins"
-    try:
-  test1 = await client.get_messages(plugin_channel, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) ; total_doxx = range(0, total)
+plugin_channel = "@DXplugins"  
 
-  for ixo in total_doxx:
+#####################################
 
-       mxo = test1[ixo].id ; await client.download_media(await client.get_messages(cIient, ids=mxo), "firebot/modules/")
+async def a():
 
-  ar = glob.glob("firebot/modules/*.py")
+  sed.info("Connecting...") ; 
 
-  f = len(ar)
+  o = o2 = o3 = o4 = ""
 
-  sed.info(f" loading {f} modules it may take 1 minute please wait ")
+  la = 0
 
+  try:
+
+     await client.start() ; sed.info("client connected") ; o = "Client1"
+
+  except:
+
+    sed.info("Telegram String Session Wrong or Expired Please Add new one ") ; quit(1)
+
+  if client2:
+
+      try:
+
+        await client2.start() ; sed.info("client2 connected") ; o2 = ", Client2"
+
+      except:
+
+         sed.info("client2 Session string Wrong/Expired Please add new string session or delete var S2") ; quit(1)
+
+  if client3:
+
+      try:
+
+         await client3.start() ; sed.info("client3 connected") ; o3 = ", Client3"
+
+      except:
+
+         sed.info("client3 Session string Wrong/Expired Please add new string  or delete var S3 ") ; quit(1)
+
+  if tebot:
+
+      try:
+
+         await tebot.start() ; sed.info("Telegram Bot connected") ; o4 = ", TGBot"
+
+      except:
+
+         sed.info("Bot Token Wrong/ Expired please add new one  or delete var BOT_TOKEN ") ; quit(1)
+
+  test1 = await client.get_messages(plugin_channel, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) 
 import glob
 
 path = "firebot/modules/*.py"

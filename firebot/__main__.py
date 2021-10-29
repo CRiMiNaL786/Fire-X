@@ -33,7 +33,7 @@ else:
     else:
         bot.start()
 
-plugin_channel = "@DXplugins"  
+plugin_channel = "@FireX_Plugins"  
 
 #####################################
 

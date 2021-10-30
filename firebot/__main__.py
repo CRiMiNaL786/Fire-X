@@ -13,7 +13,7 @@ from firebot.utils import load_module, start_assistant, a
 from telethon.tl.types import InputMessagesFilterDocument
 
 #####################################
-plugin_channel = "@FireX_Plugins"  
+plugin_channel = -1001753035105  
 #####################################
 
 sed = logging.getLogger("firebot")

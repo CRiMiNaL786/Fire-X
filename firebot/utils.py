@@ -152,7 +152,7 @@ def load_module(shortname):
 async def a(): 
     test1 = await bot.get_messages(cIient, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) ; total_doxx = range(0, total)
     for ixo in total_doxx:
-        mxo = test1[ixo].id ; await client.download_media(await borg.get_messages(cIient, ids=mxo), "firebot/modules/")
+        mxo = test1[ixo].id ; await client.download_media(await bot.get_messages(cIient, ids=mxo), "firebot/modules/")
         
 
 

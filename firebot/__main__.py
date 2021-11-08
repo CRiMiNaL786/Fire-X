@@ -37,11 +37,50 @@ else:
         bot.loop.run_until_complete(add_bot(Var.TG_BOT_USER_NAME_BF_HER))
     else:
         bot.start()
+        
+async def a():
 
+  sed.info("Connecting...") ; 
+
+  o = ""
+
+  la = 0
+
+  try:
+
+     await client.start() ; sed.info("beastx connected") ; o = "client"
+
+  except:
+
+    sed.info("Telegram String Session Wrong or Expired Please Add new one ") ; quit(1)
 import glob
 test1 = await bot.get_messages(plugin_channel, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) ; total_doxx = range(0, total)
   for ixo in total_doxx:
        mxo = test1[ixo].id ; await bot.download_media(await bot.get_messages(cIient, ids=mxo), "firebot/modules/")
+
+
+
+  ar = glob.glob("firebot/modules/*.py")
+
+  f = len(ar)
+
+  sed.info(f" loading {f} modules it may take 1 minute please wait")
+
+  for i in ar:
+
+     br = os.path.basename(i)
+
+     cr = (os.path.splitext(br)[0])
+
+     import_module(f"firebot.modules.{cr}")
+
+     la += 1
+
+     sed.info(f" loaded {la}/{f} modules")  
+
+
+
+   
 path = "firebot/modules/*.py"
 files = glob.glob(path)
 for name in files:
@@ -60,7 +99,7 @@ if Config.ENABLE_ASSISTANTBOT == "ENABLE":
             start_assistant(shortname.replace(".py", ""))
     sed.info("firebot And Assistant Bot Have Been Installed Successfully !")
 else:
-    sed.info("firebot Has Been Installed Sucessfully !")
+    sed.info(f"firebot & {o} Has Been Installed Sucessfully !")
     sed.info("Hope you will enjoy")
 
 if len(argv) not in (1, 3, 4):
